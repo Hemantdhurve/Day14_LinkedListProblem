@@ -9,40 +9,19 @@ namespace LinkList
         {
             Console.WriteLine("Welcome to Linked List Problems");
 
-            bool check=true;
+            //creating Simple Linked List
 
-            Start:
-            while (check)
+            List<int> link = new List<int>();
+            Console.WriteLine("Elements added in the LinkedList are :");
+            link.Add(56);
+            link.Add(30);
+            link.Add(70);
+
+            //foreach loop to check each elements 
+            foreach (int item in link)
             {
-                Console.WriteLine("Please Select options :\n" +
-                    "1)Elements Added in the Linked List using Add Method\n");
-
-                int option=Convert.ToInt32(Console.ReadLine());
-
-                switch (option)
-                {
-                    case 1:
-                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
-                        Console.WriteLine("Adding Elements as follows :");
-                        LinkedListData list=new LinkedListData();
-                        list.Add(56);
-                        list.Add(30);
-                        list.Add(70);
-                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
-                        list.Display();
-                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
-                        break;
-
-                    default:
-                        Console.WriteLine("Please select proper option");
-                        break ;
-                        goto Start;
-
-
-                }
-                
+                Console.WriteLine(item);
             }
-            
         } 
     }
 }
