@@ -9,19 +9,60 @@ namespace LinkList
         {
             Console.WriteLine("Welcome to Linked List Problems");
 
-            //creating Simple Linked List
+            bool check=true;
 
-            List<int> link = new List<int>();
-            Console.WriteLine("Elements added in the LinkedList are :");
-            link.Add(56);
-            link.Add(30);
-            link.Add(70);
-
-            //foreach loop to check each elements 
-            foreach (int item in link)
+            Start:
+            while (check)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Please Select options :\n" +
+                    "1)Elements Added in the Linked List using Add Method\n" +
+                    "2)Elements Appended in the linked List to Last using Append Method\n");
+
+                int option=Convert.ToInt32(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list=new LinkedListData();
+                        list.Add(56);
+                        list.Add(30);
+                        list.Add(70);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 2:
+                   
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list1 = new LinkedListData();
+                        list1.Add(56);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list1.Append(30);
+                        list1.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list1.Append(70);
+                        list1.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list1.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+
+                        break;
+
+
+                    default:
+                        Console.WriteLine("Please select proper option");
+                        break ;
+
+                        goto Start;
+       
+                }
+                
             }
+            
         } 
     }
 }
