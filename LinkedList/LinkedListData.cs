@@ -27,7 +27,6 @@ namespace LinkedList
                 temp.Next=node;
             }
             Console.WriteLine("Element added in linkedlist is : {0} ",+ node.data);
-
         }
 
         //Append Method is also used to Add Elements at last
@@ -127,7 +126,6 @@ namespace LinkedList
                 head = head.Next;
             }
         }
-
 
         //Display Method is Used to Display elements
 

@@ -21,7 +21,8 @@ namespace LinkList
                     "3)Element Inserted At a Particular Position Using Insert \n" +
                     "4)First Element Deleted from the list using pop Method\n" + 
                     "5)Last Element Deleted from the List using popLast Method\n" + 
-                    "6)Search for a Particular Element using Search Method from the List\n ");
+                    "6)Search for a Particular Element using Search Method from the List\n" + 
+                    "7)Insert Element at a Particular Position after Searching by using Insert and Search Method\n");
 
                 int option=Convert.ToInt32(Console.ReadLine());
 
@@ -64,8 +65,9 @@ namespace LinkList
                         list2.Add(56);
                         list2.Add(70);
                         //creating object of Node class and passing data 
+                        //here 30 is Inserted into the list
                         Node node = new Node(30);
-                        Console.WriteLine("Element inserted in between the list: {0}",node.data);
+                        Console.WriteLine("Element inserted in between the list after 56 : {0}",node.data);
                         Console.WriteLine("So After inserting the Final list appears as :");
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         list2.Insert(56, node);
@@ -121,6 +123,28 @@ namespace LinkList
                         Console.WriteLine("After searching for a Particular Element ");
                         list5.Search(30);
                        
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 7:
+
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list6 = new LinkedListData();
+                        list6.Add(56);
+                        list6.Add(30);
+                        list6.Add(70);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list6.Display();
+                       
+                        //creating object of Node class and passes parameter which we want to insert
+                        //here 40 is Inserted into the list
+                        Node node1 = new Node(40);
+                        Console.WriteLine("Element inserted in between the list after 30 -> {0}", node1.data);
+                        Console.WriteLine("So After inserting, the Final list appears as :");
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list6.Insert(30, node1);
+                        list6.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         break;
 
