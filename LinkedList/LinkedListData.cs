@@ -112,6 +112,23 @@ namespace LinkedList
             Node popLast=newnode.Next;
             newnode.Next = null;
         }
+
+        //Search method
+
+        public void Search(int data)
+        {
+            while(head != null)
+            {
+                if(head.data == data)
+                {
+                    Console.WriteLine("Searched element is present in linked list : {0}",data); 
+                }
+             
+                head = head.Next;
+            }
+        }
+
+
         //Display Method is Used to Display elements
 
         public void Display()

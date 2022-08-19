@@ -20,7 +20,8 @@ namespace LinkList
                     "2)Elements Appended in the linked List to Last using Append Method\n" + 
                     "3)Element Inserted At a Particular Position Using Insert \n" +
                     "4)First Element Deleted from the list using pop Method\n" + 
-                    "5)Last Element Deleted from the List using popLast Method\n");
+                    "5)Last Element Deleted from the List using popLast Method\n" + 
+                    "6)Search for a Particular Element using Search Method from the List\n ");
 
                 int option=Convert.ToInt32(Console.ReadLine());
 
@@ -103,6 +104,23 @@ namespace LinkList
                         Console.WriteLine("Last Element Popped out from the list");
                         list4.popLast();
                         list4.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 6:
+
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list5 = new LinkedListData();
+                        list5.Add(56);
+                        list5.Add(30);
+                        list5.Add(70);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list5.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("After searching for a Particular Element ");
+                        list5.Search(30);
+                       
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         break;
 
