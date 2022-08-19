@@ -19,7 +19,8 @@ namespace LinkList
                     "1)Elements Added in the Linked List using Add Method\n" +
                     "2)Elements Appended in the linked List to Last using Append Method\n" + 
                     "3)Element Inserted At a Particular Position Using Insert \n" +
-                    "4)Element Deleted from the list using pop Method\n");
+                    "4)First Element Deleted from the list using pop Method\n" + 
+                    "5)Last Element Deleted from the List using popLast Method\n");
 
                 int option=Convert.ToInt32(Console.ReadLine());
 
@@ -82,9 +83,26 @@ namespace LinkList
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         list3.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
-                        Console.WriteLine("First Element Popped from the list");
+                        Console.WriteLine("First Element Popped out from the list");
                         list3.pop();
                         list3.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 5:
+
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list4 = new LinkedListData();
+                        list4.Add(56);
+                        list4.Add(30);
+                        list4.Add(70);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list4.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Last Element Popped out from the list");
+                        list4.popLast();
+                        list4.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         break;
 

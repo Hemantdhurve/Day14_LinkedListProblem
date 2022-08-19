@@ -78,7 +78,7 @@ namespace LinkedList
             }         
         }
 
-        //pop Method to delet elements from the linked list
+        //pop Method to delete First elements from the linked list
 
         public void pop()
         {
@@ -92,6 +92,25 @@ namespace LinkedList
                 head=head.Next;
               
             }
+        }
+
+        //Delete Last Element from the Linked List using PopLast Method
+
+        public void popLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+            }
+
+            Node newnode = head;
+
+            while (newnode.Next.Next != null)
+            {
+                newnode = newnode.Next;
+            }
+            Node popLast=newnode.Next;
+            newnode.Next = null;
         }
         //Display Method is Used to Display elements
 
@@ -112,7 +131,6 @@ namespace LinkedList
                     temp=temp.Next;
                 }
             }
-         
         }
     }
 }
