@@ -1,5 +1,6 @@
 ﻿using LinkedList;
 using System;
+using System.Data;
 
 namespace LinkList
 {
@@ -17,7 +18,8 @@ namespace LinkList
                 Console.WriteLine("Please Select options :\n" +
                     "1)Elements Added in the Linked List using Add Method\n" +
                     "2)Elements Appended in the linked List to Last using Append Method\n" + 
-                    "3)Element Inserted At a Particular Position Using Insert \n");
+                    "3)Element Inserted At a Particular Position Using Insert \n" +
+                    "4)Element Deleted from the list using pop Method\n");
 
                 int option=Convert.ToInt32(Console.ReadLine());
 
@@ -50,8 +52,8 @@ namespace LinkList
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         list1.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
-
                         break;
+
                     case 3:
 
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
@@ -66,6 +68,23 @@ namespace LinkList
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         list2.Insert(56, node);
                         list2.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 4:
+
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list3 = new LinkedListData();
+                        list3.Add(56);
+                        list3.Add(30);
+                        list3.Add(70);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list3.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("First Element Popped from the list");
+                        list3.pop();
+                        list3.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         break;
 
