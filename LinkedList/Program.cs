@@ -153,10 +153,10 @@ namespace LinkedList
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         Console.WriteLine("Adding Elements as follows :");
                         LinkedListData list7 = new LinkedListData();
-                        list7.Add(56);
-                        list7.Add(30);
-                        list7.Add(40);
-                        list7.Add(70);
+                        list7.Append(56);
+                        list7.Append(30);
+                        list7.Append(40);
+                        list7.Append(70);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         list7.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
