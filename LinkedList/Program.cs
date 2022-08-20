@@ -1,8 +1,7 @@
-﻿using LinkedList;
-using System;
+﻿using System;
 using System.Data;
 
-namespace LinkList
+namespace LinkedList
 {
     public class Program
     {
@@ -22,7 +21,8 @@ namespace LinkList
                     "4)First Element Deleted from the list using pop Method\n" + 
                     "5)Last Element Deleted from the List using popLast Method\n" + 
                     "6)Search for a Particular Element using Search Method from the List\n" + 
-                    "7)Insert Element at a Particular Position after Searching by using Insert and Search Method\n");
+                    "7)Insert Element at a Particular Position after Searching by using Insert and Search Method\n" +
+                    "8)Delete Element from a particular Position and get a Size of the Linked List\n");
 
                 int option=Convert.ToInt32(Console.ReadLine());
 
@@ -147,6 +147,28 @@ namespace LinkList
                         list6.Display();
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
                         break;
+
+                    case 8:
+
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        LinkedListData list7 = new LinkedListData();
+                        list7.Add(56);
+                        list7.Add(30);
+                        list7.Add(40);
+                        list7.Add(70);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        list7.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.Write("Deleting 40 from the list now " + " ");
+                        list7.delElement(40);
+                        list7.Display();
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.Write("Size of the linked list is : ");
+                        list7.size();
+    
+                        break;
+
 
                     default:
                         Console.WriteLine("Please select proper option");

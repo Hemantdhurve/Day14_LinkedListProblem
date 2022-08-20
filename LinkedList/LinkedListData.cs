@@ -114,8 +114,9 @@ namespace LinkedList
 
         //Search method
 
-        public void Search(int data)
+        public Node Search(int data)
         {
+
             while(head != null)
             {
                 if(head.data == data)
@@ -125,6 +126,44 @@ namespace LinkedList
              
                 head = head.Next;
             }
+            return null;
+        }
+
+        //DelElement is used to delete particular element
+        public void delElement(int data)
+        {
+            //head stored in temp Node
+            Node temp = head, lastNode = null;
+            if (temp != null && temp.data == data)
+            {
+                head = temp.Next;
+                return;
+            }
+            while (temp != null && temp.data != data)
+            {
+                lastNode = temp;
+                temp = temp.Next;
+            }
+            if (temp == null)
+                return;
+            lastNode.Next = temp.Next;
+        }
+
+        //Size method can be used to get size of linked ist
+
+        public void size()
+        {
+            int count = 1;
+            Node temp = head;
+
+            while(temp.Next != null) 
+            {
+                
+                temp=temp.Next;
+                count++;
+            }
+           
+            Console.WriteLine(count);
         }
 
         //Display Method is Used to Display elements
