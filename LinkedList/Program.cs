@@ -22,7 +22,8 @@ namespace LinkedList
                     "5)Last Element Deleted from the List using popLast Method\n" + 
                     "6)Search for a Particular Element using Search Method from the List\n" + 
                     "7)Insert Element at a Particular Position after Searching by using Insert and Search Method\n" +
-                    "8)Delete Element from a particular Position and get a Size of the Linked List\n");
+                    "8)Delete Element from a particular Position and get a Size of the Linked List\n" +
+                    "9)Elements sorted from the given Linked List using Sorted Add Method\n");
 
                 int option=Convert.ToInt32(Console.ReadLine());
 
@@ -168,6 +169,22 @@ namespace LinkedList
                         list7.size();
     
                         break;
+
+                    case 9:
+
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Adding Elements as follows :");
+                        SortedLinkedList sort = new SortedLinkedList();
+                        sort.Add(56);
+                        sort.Add(30);
+                        sort.Add(40);
+                        sort.Add(70);
+                       
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::");
+                        Console.Write("After Sorting Elements ");
+                        sort.Display();
+                        break;
+
 
 
                     default:
